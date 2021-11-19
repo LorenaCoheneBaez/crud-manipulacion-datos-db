@@ -7,14 +7,10 @@ module.exports = [
     .withMessage('Campo obligatorio'),
   body('rating')
     .notEmpty()
-    .withMessage('Campo obligatorio')
-    .isInt()
-    .withMessage('Ingrese solo números'),
+    .withMessage('Campo obligatorio'),
   body('awards')
     .notEmpty()
-    .withMessage('Campo obligatorio')
-    .isInt()
-    .withMessage('Ingrese solo números'),
+    .withMessage('Campo obligatorio'),
   body('release_date')
     .notEmpty()
     .withMessage('Campo obligatorio')
