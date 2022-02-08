@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title class="titulo">Editar Película</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='/css/style.css' />
 </head>
 
 <body>
-    <figure>
-        <img src="/img/logo-DH.png" alt="Logo Digital House">
-    </figure>
+    <a href="/">
+        <figure>
+            <img src="/img/logo-DH.png" alt="Logo Digital House">
+        </figure>
+    </a>
     <h1 class="titulo">Película a Editar: <%= Movie.title %>
     </h1>
     <section class="formulario">
@@ -19,21 +23,21 @@
             <label for="title">Title </label>
             <p><input type="text" name="title" id="title" value="<%= locals.old && locals.old.title ? old.title : Movie.title %>" required>
             <!-- Posibles errores -->
-                <span 
+                <span class="text-danger"
                   ><%= locals.errores && locals.errores.title ? errores.title.msg :
                   null %></span>
             </p>
             <label for="rating">Rating </label>
             <p><input type="number" name="rating" id="rating" value="<%= locals.old && locals.old.rating ? old.rating : Movie.rating %>" required>
             <!-- Posibles errores -->
-                <span 
+                <span class="text-danger"
                   ><%= locals.errores && locals.errores.rating ? errores.rating.msg :
                   null %></span
                 ></p>
             <label for="awards">Awards </label>
             <p><input type="number" name="awards" id="awards" value="<%= locals.old && locals.old.awards? old.awards: Movie.awards%>" required>
             <!-- Posibles errores -->
-                <span 
+                <span class="text-danger"
                   ><%= locals.errores && locals.errores.awards ? errores.awards.msg :
                   null %></span
                 >
@@ -41,7 +45,7 @@
             <label for="release_date">Release date </label>
             <p><input type="date" name="release_date" id="release_date" value="<%= locals.old && locals.old.release_date ? old.release_date : fecha %>" required>
              <!-- Posibles errores -->
-                <span 
+                <span class="text-danger"
                   ><%= locals.errores && locals.errores.release_date ? errores.release_date.msg :
                   null %></span
                 >
@@ -49,7 +53,7 @@
             <label for="length">Length </label>
             <p><input type="number" name="length" id="" value="<%= locals.old && locals.old.length ? old.length : Movie.length %>" required>
                  <!-- Posibles errores -->
-                <span 
+                <span class="text-danger"
                   ><%= locals.errores && locals.errores.length ? errores.length.msg :
                   null %></span
                 >
@@ -57,7 +61,7 @@
             <br>
             <p> <button class="botonAgregar" type="submit">Actualizar</button>
 
-                <a class="botonVolver" href="/movies">Listado de Películas</a>
+                <a class="botonVolver" href="/movies"> <button>Listado de Películas</button> </a>
             </p>
         </form>
     </section>

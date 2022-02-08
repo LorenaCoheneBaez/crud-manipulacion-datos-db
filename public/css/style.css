@@ -5,15 +5,74 @@
 }
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+a{
+  color: black;
+  text-decoration: none;
 }
+
+a:hover {
+  color: black;
+ font-size: 18px;
+}
+
+li{
+  margin-bottom: 5px;
+}
+
 img{
   width: 100%;
 }
 figure{
   width: 20%;
+}
+
+button{
+  background-color: grey;  
+  color: #000;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button:hover{
+  text-decoration: underline;
+font-size: 18px;
+}
+
+/* Home */
+/* {Animación escritura en vivo para titulos */
+.titulo-saludo{
+  position: relative;
+      top: 50%;
+      width: 16em;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      font-size: 180%;
+      white-space: nowrap;
+      overflow: hidden;transform: translateY(-50%);
+}
+
+.animacion-escritura{
+  animation: escritura 4s steps(36) 1s 1 normal both,
+      cursor 500ms steps(36) infinite normal;
+}
+
+@keyframes escritura {
+      from {
+            width: 0;
+      }
+      to {
+            width: 16em;
+      }
+}
+
+@keyframes cursor {
+      from {
+            border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+            border-right-color: transparent;
+      }
 }
