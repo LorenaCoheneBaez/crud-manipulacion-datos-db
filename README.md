@@ -30,7 +30,7 @@ Además se hacen validaciones en formularios de agregar y editar películas con 
 
 - Desde su gestor de base de datos, correr el script que se encuentra en:
 
-   src/database/script/movies-db.sql
+   crud-manipulacion-datos-db/src/database/script/movies-db.sql
 
 - Levantar el servidor para la base de datos desde su gestor de base de datos.
 
